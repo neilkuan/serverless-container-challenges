@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { ServerlessContainerChallengesStack } from '../lib/serverless-container-challenges-stack';
+import { ServerlessContainerConstructsChallengesStack } from '../lib/serverless-container-constructs-challenges';
 const env = {
     region: process.env.CDK_DEFAULT_REGION,
     account: process.env.CDK_DEFAULT_ACCOUNT,
   };
 const app = new cdk.App();
-new ServerlessContainerChallengesStack(app, 'ServerlessContainerChallengesStack', {
+new ServerlessContainerConstructsChallengesStack(app, 'ServerlessContainerConstructsChallengesStack', {
   defaultVpc: true,
   // will give value from cdk deploy -c arn=xxxx -c zoneId=xxxx -c zoneName=xxxx 
   certArn: app.node.tryGetContext('arn'),
