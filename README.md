@@ -1,4 +1,4 @@
-# Serverless Container Challenges
+# Serverless Containers Constructs Challenges.
 
 ## First Challenge: Run a Serverless Container via AWS CDK.
 - [x] Run a Serverless Container via DualAlbFargateService() (from [cdk-fargate-patterns](https://github.com/pahud/cdk-fargate-patterns)).
