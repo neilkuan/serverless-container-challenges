@@ -1,14 +1,21 @@
-# Welcome to your CDK TypeScript project!
+# Serverless Container Challenges
 
-This is a blank project for TypeScript development with CDK.
+## First Challenge: Run a Serverless Container via AWS CDK.
+- [x] Run a Serverless Container via DualAlbFargateService() (from [cdk-fargate-patterns](https://github.com/pahud/cdk-fargate-patterns)).
+- [x] Alias load balancer dns domain name on yourself Domain.
+- [x] Open `https://my.domain` get the result.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+### To diff:
+```bash
+cdk diff -c arn="arn:aws:acm:ap-northeast-1:123456789012:certificate/3e4r5t6y-3e3e-2w2w-1q1q-x1x1x1x1x1x" -c zoneId="Z2345erty456722ws" -c zoneName="example.com"
+```
 
-## Useful commands
+### To deploy:
+```bash
+cdk deploy -c arn="arn:aws:acm:ap-northeast-1:123456789012:certificate/3e4r5t6y-3e3e-2w2w-1q1q-x1x1x1x1x1x" -c zoneId="Z2345erty456722ws" -c zoneName="example.com"
+```
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+### To destroy:
+```bash
+cdk destroy
+```
